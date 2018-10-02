@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:appHostable">
+    <iframe aura:id="vfFrame" src="/apex/Quote" class="vfFrame"/>
+</aura:component>

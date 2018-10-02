@@ -1,0 +1,42 @@
+<aura:component controller="PrimaryActivityPOCController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="eventRecord" type="Event[]"/>
+    <aura:attribute name="recordId" type="Id" />
+    
+    <aura:iteration items="{!v.eventRecord}" var="eventRec">
+       
+    <div class="slds-timeline__item">
+  <span class="slds-assistive-text">Event</span>
+  <div class="slds-media">
+    <div class="slds-media__body">
+      <div class="slds-media slds-timeline__media slds-timeline__media_event">
+        <div class="slds-media__figure slds-timeline__icon">
+          <div class="slds-icon_container slds-icon-standard-event" title="event">
+              <c:svgIcon class="slds-icon slds-icon_small slds-icon_container slds-icon-standard-event" ariaHidden="true" xlinkHref="/resource/LDS_Resource/assets/icons/standard-sprite/svg/symbols.svg#event"/>
+          </div>
+        </div>
+        <div class="slds-media__body">
+             <span class="slds-text-title">Subject:</span>
+            <h3 class="slds-truncate" title="Company One — EBC Meeting"><a href="{!eventRec.Id}">{!eventRec.Subject}</a></h3>
+              <ul class="slds-list_horizontal slds-wrap">
+            <li class="slds-m-right_large">
+              <span class="slds-text-title">Time:</span>
+              <span class="slds-text-body_small"><a href="javascript:void(0);">{!eventRec.StartDateTime}</a></span>
+            </li>
+            <li class="slds-m-right_large">
+              <span class="slds-text-title">Location:</span>
+              <span class="slds-text-body_small"><a href="javascript:void(0);">{!eventRec.Location}</a></span>
+            </li>
+            <li class="slds-m-right_large">
+              <span class="slds-text-title">Opp Name:</span>
+              <span class="slds-text-body_small"><a href="javascript:void(0);">{!eventRec.whatID}</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </div>
+</div>
+</aura:iteration>
+</aura:component>

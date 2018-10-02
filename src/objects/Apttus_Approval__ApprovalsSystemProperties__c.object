@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Approvals System properties</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Apttus_Approval__AdminUser__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The admin user name (format = first name, last name)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The admin user is the default owner of activities created by a user who is not allowed to be the owner (for e.g. customer portal user).</inlineHelpText>
+        <label>Admin User</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__ApprovalTaskPrefix__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The prefix for the approval history subject.</description>
+        <externalId>false</externalId>
+        <label>Approval Task Prefix</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__BackupAdminProfile__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The backup admin profile name</description>
+        <externalId>false</externalId>
+        <label>Backup Admin Profile</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__BackupAdminUser__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The backup admin user name</description>
+        <externalId>false</externalId>
+        <label>Backup Admin User</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__BackupFilterPage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The custom page to filter and select a backup user</description>
+        <externalId>false</externalId>
+        <label>Backup Filter Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__BypassSharing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates whether apex code can bypass record sharing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether apex code can bypass record sharing</inlineHelpText>
+        <label>Bypass Sharing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__EmailApprovalServiceAddress__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The email service address that can receive messages for processing.</description>
+        <externalId>false</externalId>
+        <label>Email Approval Service Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__EmailSenderDisplayName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the datasource for the email sender display name. If not set, defaults to the name of the requester for agreements and defaults to the name of the submitter for all others. 
+
+Valid values are : 
+============= 
+Approver 
+Requester 
+Submitter</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the datasource for the email sender display name. If not set, defaults to the name of the requester for agreements and defaults to the name of the submitter for all others.
+
+Valid values are : 
+============= 
+Approver 
+Requester 
+Submitter</inlineHelpText>
+        <label>Email Sender Display Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__EnableApprovalRequestAutoEscalation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Set this field to true to have approval requests currently assigned or reassigned automatically escalated to another user or queue if no actions have been taken after a specified time.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set this field to true to have approval requests currently assigned or reassigned automatically escalated to another user or queue if no actions have been taken after a specified time.</inlineHelpText>
+        <label>Enable Approval Request Auto-Escalation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__EnableEmailApprovalResponse__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enabling email approval response lets users reply to email approval requests by typing APPROVE or REJECT in the first line and adding comments in the second line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enabling email approval response lets users reply to email approval requests by typing APPROVE or REJECT in the first line and adding comments in the second line.</inlineHelpText>
+        <label>Enable Email Approval Response</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__EnableResubmit__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This property is used for the submit for approvals button on the related list. When true, and user clicks on submit, current approval requests are cancelled and new approval requests are resubmitted. When false, and user clicks on submit, this flag will prevent the user from canceling and resubmitting an on-going approval process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for the submit for approvals button on the related list. 
+When true, current approval requests are cancelled and new requests are resubmitted. 
+When false, will prevent the user from canceling and resubmitting an on-going approval process.</inlineHelpText>
+        <label>Enable Resubmit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__InstanceUrl__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Salesforce instance url for redirecting to custom pages</description>
+        <externalId>false</externalId>
+        <label>Instance Url</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__ReassignFilterPage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The custom page to filter and select a reassign user</description>
+        <externalId>false</externalId>
+        <label>Reassign Filter Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__ReassignMyApprovalsFilterPage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The custom page to filter and select a reassign user from the MyApprovals view</description>
+        <externalId>false</externalId>
+        <label>Reassign My Approvals Filter Page</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__UIAssigneeSearchPageSize__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specify a value here to denote the number of search results rows to display when searching for assignee queues, roles, rules, or users in admin setup. The default is 20 rows.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify a value here to denote the number of search results rows to display when searching for assignee queues, roles, rules, or users in admin setup. The default is 20 rows.</inlineHelpText>
+        <label>UI Assignee Search Page Size</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Approval__UICustomAssigneeObjectTypes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The field specifies a comma separated list of API names of Standard or Custom objects you want to use to when defining custom assignee expressions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field specifies a comma separated list of API names of Standard or Custom objects you want to use to when defining custom assignee expressions</inlineHelpText>
+        <label>UI Custom Assignee Object Types</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Approvals System Properties</label>
+    <visibility>Public</visibility>
+</CustomObject>

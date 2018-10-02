@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AgeFromMonths__c</fullName>
+        <externalId>false</externalId>
+        <label>AgeFrom(Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgeFromYears__c</fullName>
+        <externalId>false</externalId>
+        <label>AgeFrom(Years)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgeFrom__c</fullName>
+        <description>This is to define from which specific age the template should be attached, this should be in the format: __Y__M OR __Y.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This should be in the format: __Y__M  OR  __Y</inlineHelpText>
+        <label>AgeFrom</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgeToMonths__c</fullName>
+        <externalId>false</externalId>
+        <label>AgeTo(Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgeToYears__c</fullName>
+        <externalId>false</externalId>
+        <label>AgeTo(Years)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgeTo__c</fullName>
+        <description>This is to define to which specific age the template should be attached, this should be in the format: __Y__M or __Y .</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This should be in the format: __Y__M or  __Y</inlineHelpText>
+        <label>AgeTo</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExtraBrochureToSend__c</fullName>
+        <description>If we want to send any extra brochure to customer</description>
+        <externalId>false</externalId>
+        <label>ExtraBrochureToSend</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Programs</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>This is to define if a setting is active or not.</description>
+        <externalId>false</externalId>
+        <label>IsActive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Label__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This should be filtered list of all the active label templates available for Market and Program.</description>
+        <externalId>false</externalId>
+        <label>Label</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <errorMessage>There are no Labels available for this Market and program combination!!</errorMessage>
+            <filterItems>
+                <field>APXTConga4__Conga_Template__c.APXTConga4__Template_Type__c</field>
+                <operation>equals</operation>
+                <value>Label</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Market__c</field>
+                <operation>equals</operation>
+                <valueField>APXTConga4__Conga_Template__c.Market__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Program__c</field>
+                <operation>equals</operation>
+                <valueField>APXTConga4__Conga_Template__c.Program__c</valueField>
+            </filterItems>
+            <infoMessage>Value does not exist or does not match filter criteria.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>APXTConga4__Conga_Template__c</referenceTo>
+        <relationshipLabel>Template Settings (Label)</relationshipLabel>
+        <relationshipName>Template_Settings1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <description>User should be able to select the language based on which they want to send the brochure, example if the customer stays in Belgium and speaks French or Dutch our template should be in the correct language.</description>
+        <externalId>false</externalId>
+        <label>Language</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>MainLanguage</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Letter__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>This should be filtered list of all the active letter templates available for Market and Program.</description>
+        <externalId>false</externalId>
+        <label>Letter</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <errorMessage>There are no Letters available for this Market and program combination!!</errorMessage>
+            <filterItems>
+                <field>APXTConga4__Conga_Template__c.APXTConga4__Template_Type__c</field>
+                <operation>equals</operation>
+                <value>Document</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Market__c</field>
+                <operation>equals</operation>
+                <valueField>APXTConga4__Conga_Template__c.Market__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Program__c</field>
+                <operation>equals</operation>
+                <valueField>APXTConga4__Conga_Template__c.Program__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>APXTConga4__Conga_Template__c</referenceTo>
+        <relationshipLabel>Template Settings</relationshipLabel>
+        <relationshipName>Template_Settings</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <description>For which market we need to run the rule</description>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Market</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <description>The user shall select the program for which he/she would like to add a setting.</description>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Programs</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>RecordSharingKey__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Market__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>RecordSharingKey</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>TemplateSetting</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>TemplateSetting Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Template Settings</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Market__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Program__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Language__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Label__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Letter__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IsActive__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AgeFromYears__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AgeToYears__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Label__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Letter__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Market__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Program__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IsActive__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Label__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Letter__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AgeFromYears__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AgeFromMonths__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AgeToYears__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AgeToMonths__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>AgeFromFormatCheck</fullName>
+        <active>false</active>
+        <description>AgeFrom should be in this format: __Y__M Or __Y</description>
+        <errorConditionFormula>NOT(
+OR(
+REGEX(AgeFrom__c , &quot;[0-9]{2}[Y]&quot;),
+REGEX(AgeFrom__c , &quot;[0-9]{2}[Y](0[1-9]|1[012])[M]&quot;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>AgeFrom__c</errorDisplayField>
+        <errorMessage>Please enter AgeFrom in this format: __Y__M Or __Y</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AgeToFormatCheck</fullName>
+        <active>false</active>
+        <description>AgeTo should be in this format: __Y__M Or __Y</description>
+        <errorConditionFormula>NOT(
+OR(
+REGEX( AgeTo__c , &quot;[0-9]{2}[Y]&quot;),
+REGEX(AgeTo__c , &quot;[0-9]{2}[Y](0[1-9]|1[012])[M]&quot;)
+)
+)</errorConditionFormula>
+        <errorDisplayField>AgeTo__c</errorDisplayField>
+        <errorMessage>Please enter AgeTo in this format: __Y__M Or __Y</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AgeToShouldBeAlwaysGreaterThanAgeFrom</fullName>
+        <active>true</active>
+        <description>AgeToShouldBeAlwaysGreaterThanAgeFrom</description>
+        <errorConditionFormula>(AgeToYears__c  * 12) +  AgeToMonths__c  &lt;=  ( AgeFromYears__c * 12) +  AgeFromMonths__c</errorConditionFormula>
+        <errorMessage>AgeTo should be always greater than AgeFrom.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AgeToShouldBeGreaterThanAgeFrom</fullName>
+        <active>false</active>
+        <description>Age to should always be greater than AgeFrom.</description>
+        <errorConditionFormula>VALUE(LEFT((AgeTo__c) , 2)) &lt; VALUE(LEFT((AgeFrom__c) , 2))</errorConditionFormula>
+        <errorDisplayField>AgeTo__c</errorDisplayField>
+        <errorMessage>Age to should always be greater than Age From.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MonthValidationRule</fullName>
+        <active>true</active>
+        <description>Month value cannot exceed 12.</description>
+        <errorConditionFormula>OR(AgeFromMonths__c &gt; 12,  AgeToMonths__c &gt; 12)</errorConditionFormula>
+        <errorMessage>Please enter valid month!! Cannot exceed value 12</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForRecordHome,force:appHostable">
+	<ui:inputEmail value="abc@email.com"/>
+</aura:component>

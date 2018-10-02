@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Checks the Market and Program of Lead records.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AutoCloseBrochureRequest__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This setting specify if a new SBR task should not be created if we already had sent the brochure for same program X days before.</description>
+        <externalId>false</externalId>
+        <label>AutoCloseBrochureRequest</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DoNotSendBrochure__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Do not create SBR task at all, this setting should be used for markets which don&apos;t send brochure at all, like WWA, FIH.</description>
+        <externalId>false</externalId>
+        <label>DoNotSendBrochure</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>MarketProgramLevelSetting</label>
+    <visibility>Public</visibility>
+</CustomObject>

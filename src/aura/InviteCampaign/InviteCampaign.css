@@ -1,0 +1,18 @@
+/**
+ * Created by thejasvi.a on 9/18/2017.
+ */
+.THIS .opp_btn_margin {
+    margin-top: 40px;
+}
+
+.THIS span.slds-truncate {
+          display: block;
+}
+
+.THIS .pos_relaive{
+  position: relative;
+}
+
+.THIS .campaignTable{
+    overflow:hidden;
+}

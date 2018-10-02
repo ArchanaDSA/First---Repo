@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ComposeGmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>LogCall</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>MailMerge</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>RequestUpdate</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SendEmail</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ViewAll</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Accommodation__c</fullName>
+        <externalId>false</externalId>
+        <label>Accommodation</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ActivityDateTime__c</fullName>
+        <description>ActivityDateTime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ActivityDateTime</inlineHelpText>
+        <label>ActivityDateTime</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AdditionalPrograms__c</fullName>
+        <description>This field is used to capture the false programs.</description>
+        <externalId>false</externalId>
+        <label>Additional Programs</label>
+        <length>125</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApplicationFee__c</fullName>
+        <externalId>false</externalId>
+        <label>Application Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ApptusQuoteID__c</fullName>
+        <externalId>false</externalId>
+        <label>Apptus Quote ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoClosed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field will automatically get checked based on number of days crossed.</description>
+        <externalId>false</externalId>
+        <label>Auto Closed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CampaignName__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignQuestionsAnswer__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Questions Answer</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CloseDate__c</fullName>
+        <description>Its the Closedate if Activity</description>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CloseMainReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Main Reason</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>ResultType__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Had no intention</fullName>
+                    <default>false</default>
+                    <label>Had no intention</label>
+                </value>
+                <value>
+                    <fullName>Lost to competitor</fullName>
+                    <default>false</default>
+                    <label>Lost to competitor</label>
+                </value>
+                <value>
+                    <fullName>Had intention and money, but chose to do something else</fullName>
+                    <default>false</default>
+                    <label>Had intention and money, but chose to do something else</label>
+                </value>
+                <value>
+                    <fullName>Has no means</fullName>
+                    <default>false</default>
+                    <label>Has no means</label>
+                </value>
+                <value>
+                    <fullName>Finds EF offer too expensive</fullName>
+                    <default>false</default>
+                    <label>Finds EF offer too expensive</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Close</controllingFieldValue>
+                <valueName>Had no intention</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Close</controllingFieldValue>
+                <valueName>Lost to competitor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Close</controllingFieldValue>
+                <valueName>Had intention and money, but chose to do something else</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Close</controllingFieldValue>
+                <valueName>Has no means</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Close</controllingFieldValue>
+                <valueName>Finds EF offer too expensive</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>CloseSubReason__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Sub Reason</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>CloseMainReason__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Competitor is cheaper</fullName>
+                    <default>false</default>
+                    <label>Competitor is cheaper</label>
+                </value>
+                <value>
+                    <fullName>Has better reputation</fullName>
+                    <default>false</default>
+                    <label>Has better reputation</label>
+                </value>
+                <value>
+                    <fullName>Better Service</fullName>
+                    <default>false</default>
+                    <label>Better Service</label>
+                </value>
+                <value>
+                    <fullName>Competitors has more things included in the price</fullName>
+                    <default>false</default>
+                    <label>Competitors has more things included in the price</label>
+                </value>
+                <value>
+                    <fullName>More flexible</fullName>
+                    <default>false</default>
+                    <label>More flexible</label>
+                </value>
+                <value>
+                    <fullName>Better offer</fullName>
+                    <default>false</default>
+                    <label>Better offer</label>
+                </value>
+                <value>
+                    <fullName>Replied faster</fullName>
+                    <default>false</default>
+                    <label>Replied faster</label>
+                </value>
+                <value>
+                    <fullName>Bigger brand</fullName>
+                    <default>false</default>
+                    <label>Bigger brand</label>
+                </value>
+                <value>
+                    <fullName>My friend is going with a competitor</fullName>
+                    <default>false</default>
+                    <label>My friend is going with a competitor</label>
+                </value>
+                <value>
+                    <fullName>Has local office</fullName>
+                    <default>false</default>
+                    <label>Has local office</label>
+                </value>
+                <value>
+                    <fullName>None</fullName>
+                    <default>false</default>
+                    <label>None</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Had no intention</controllingFieldValue>
+                <controllingFieldValue>Had intention and money, but chose to do something else</controllingFieldValue>
+                <controllingFieldValue>Has no means</controllingFieldValue>
+                <controllingFieldValue>Finds EF offer too expensive</controllingFieldValue>
+                <valueName>None</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Competitor is cheaper</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Has better reputation</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Better Service</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Competitors has more things included in the price</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>More flexible</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Better offer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Replied faster</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Bigger brand</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>My friend is going with a competitor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Lost to competitor</controllingFieldValue>
+                <valueName>Has local office</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ClosedBy__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This field captures the user who has closed it.</description>
+        <externalId>false</externalId>
+        <label>Closed By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Activities</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Course__c</fullName>
+        <externalId>false</externalId>
+        <label>Course</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerRequest__c</fullName>
+        <description>Specifies which Task is Linked to which Customer Request on Task Record Level.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp; EventId__c , &quot;Customer Request&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Request</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DepartureCity__c</fullName>
+        <externalId>false</externalId>
+        <label>Departure City</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>DestinationCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Destination Code</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DeviceType__c</fullName>
+        <externalId>false</externalId>
+        <label>Device Type</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duration__c</fullName>
+        <externalId>false</externalId>
+        <label>Duration</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Etag__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Etag</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EventId__c</fullName>
+        <description>Stores customer Request id in Task.</description>
+        <externalId>false</externalId>
+        <label>EventId(Customer Request Id)</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FalseBrochureProgramCodes__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>False Brochure Program Codes</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FollowUpDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Follow-Up Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>FormSubmissionID__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>FormSubmission ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InfoMeetingID__c</fullName>
+        <externalId>false</externalId>
+        <label>InfoMeeting ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InsertBy__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Insert By</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InsertDate__c</fullName>
+        <externalId>false</externalId>
+        <label>Insert Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>IsClosed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsClosed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsEBrochure__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Is EBrochure</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsExpressCall__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is ExpressCall</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsJunior__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Junior</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsUP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is UP</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>KeyWord__c</fullName>
+        <externalId>false</externalId>
+        <label>Key Word</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LatestEntrySourceCode__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Latest Entry Source Code</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LatestEtag__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Latest Etag</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LatestKeywords__c</fullName>
+        <externalId>false</externalId>
+        <label>Latest Keywords</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>LatestPartnerCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Latest Partner Code</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lead_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Channel</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AP Reply Card</fullName>
+                    <default>false</default>
+                    <label>AP Reply Card</label>
+                </value>
+                <value>
+                    <fullName>APP Reply Card</fullName>
+                    <default>false</default>
+                    <label>APP Reply Card</label>
+                </value>
+                <value>
+                    <fullName>Aupair Kft</fullName>
+                    <default>false</default>
+                    <label>Aupair Kft</label>
+                </value>
+                <value>
+                    <fullName>Call</fullName>
+                    <default>false</default>
+                    <label>Call</label>
+                </value>
+                <value>
+                    <fullName>CLT Reply Card</fullName>
+                    <default>false</default>
+                    <label>CLT Reply Card</label>
+                </value>
+                <value>
+                    <fullName>Convert</fullName>
+                    <default>false</default>
+                    <label>Convert</label>
+                </value>
+                <value>
+                    <fullName>Coupon</fullName>
+                    <default>false</default>
+                    <label>Coupon</label>
+                </value>
+                <value>
+                    <fullName>E-Mail</fullName>
+                    <default>false</default>
+                    <label>E-Mail</label>
+                </value>
+                <value>
+                    <fullName>Exhibition/Fair</fullName>
+                    <default>false</default>
+                    <label>Exhibition/Fair</label>
+                </value>
+                <value>
+                    <fullName>Fax</fullName>
+                    <default>false</default>
+                    <label>Fax</label>
+                </value>
+                <value>
+                    <fullName>Flyer</fullName>
+                    <default>false</default>
+                    <label>Flyer</label>
+                </value>
+                <value>
+                    <fullName>Gewinnspiel</fullName>
+                    <default>false</default>
+                    <label>Gewinnspiel</label>
+                </value>
+                <value>
+                    <fullName>HSY Reply Card</fullName>
+                    <default>false</default>
+                    <label>HSY Reply Card</label>
+                </value>
+                <value>
+                    <fullName>Internet</fullName>
+                    <default>false</default>
+                    <label>Internet</label>
+                </value>
+                <value>
+                    <fullName>LS Reply Card</fullName>
+                    <default>false</default>
+                    <label>LS Reply Card</label>
+                </value>
+                <value>
+                    <fullName>Mail</fullName>
+                    <default>false</default>
+                    <label>Mail</label>
+                </value>
+                <value>
+                    <fullName>Mobile Site</fullName>
+                    <default>false</default>
+                    <label>Mobile Site</label>
+                </value>
+                <value>
+                    <fullName>Multi-Flyer</fullName>
+                    <default>false</default>
+                    <label>Multi-Flyer</label>
+                </value>
+                <value>
+                    <fullName>Multi-Replycard</fullName>
+                    <default>false</default>
+                    <label>Multi-Replycard</label>
+                </value>
+                <value>
+                    <fullName>Not known</fullName>
+                    <default>false</default>
+                    <label>Not known</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+                <value>
+                    <fullName>Post</fullName>
+                    <default>false</default>
+                    <label>Post</label>
+                </value>
+                <value>
+                    <fullName>Reply Card</fullName>
+                    <default>false</default>
+                    <label>Reply Card</label>
+                </value>
+                <value>
+                    <fullName>Reply Card EFC</fullName>
+                    <default>false</default>
+                    <label>Reply Card EFC</label>
+                </value>
+                <value>
+                    <fullName>Reply Card FD</fullName>
+                    <default>false</default>
+                    <label>Reply Card FD</label>
+                </value>
+                <value>
+                    <fullName>Reply Card LT</fullName>
+                    <default>false</default>
+                    <label>Reply Card LT</label>
+                </value>
+                <value>
+                    <fullName>SCH Reply Card</fullName>
+                    <default>false</default>
+                    <label>SCH Reply Card</label>
+                </value>
+                <value>
+                    <fullName>SMS</fullName>
+                    <default>false</default>
+                    <label>SMS</label>
+                </value>
+                <value>
+                    <fullName>Telemarketing</fullName>
+                    <default>false</default>
+                    <label>Telemarketing</label>
+                </value>
+                <value>
+                    <fullName>Visit</fullName>
+                    <default>false</default>
+                    <label>Visit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Market</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Market</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Merge_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Merge Reason</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityID__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Opportunity ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OriginalDueDate__c</fullName>
+        <description>This field captured the Initial Due-date.</description>
+        <externalId>false</externalId>
+        <label>Original Due Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PartnerCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Code</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Processedfortaskcreation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will be help full weather tasks are created for particular customer activity or not?</description>
+        <externalId>false</externalId>
+        <label>Processedfortaskcreation</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Product</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <description>Field is used to map program from lead to a customer request.</description>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Programs</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>QuotationID__c</fullName>
+        <externalId>false</externalId>
+        <label>Quotation ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReservedArticles__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserved Articles</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ReservedCoursePrice__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserved Course Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReservedPrice__c</fullName>
+        <externalId>false</externalId>
+        <label>Reserved Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ResultType__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Result Type for call logged in.</inlineHelpText>
+        <label>Result Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>SalesAction__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Next Call</fullName>
+                    <default>false</default>
+                    <label>Next Call</label>
+                </value>
+                <value>
+                    <fullName>Call Appointment</fullName>
+                    <default>false</default>
+                    <label>Call Appointment</label>
+                </value>
+                <value>
+                    <fullName>Visit</fullName>
+                    <default>false</default>
+                    <label>Visit</label>
+                </value>
+                <value>
+                    <fullName>Close</fullName>
+                    <default>false</default>
+                    <label>Close</label>
+                </value>
+                <value>
+                    <fullName>Change Program</fullName>
+                    <default>false</default>
+                    <label>Change Program</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Call Reached</controllingFieldValue>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <controllingFieldValue>Called Us</controllingFieldValue>
+                <controllingFieldValue>Visited Us</controllingFieldValue>
+                <controllingFieldValue>Emailed Us</controllingFieldValue>
+                <controllingFieldValue>Sent Email</controllingFieldValue>
+                <controllingFieldValue>Social Media Reached</controllingFieldValue>
+                <controllingFieldValue>Social Media Sent</controllingFieldValue>
+                <valueName>Next Call</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Reached</controllingFieldValue>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <controllingFieldValue>Called Us</controllingFieldValue>
+                <controllingFieldValue>Visited Us</controllingFieldValue>
+                <controllingFieldValue>Emailed Us</controllingFieldValue>
+                <controllingFieldValue>Sent Email</controllingFieldValue>
+                <controllingFieldValue>Social Media Reached</controllingFieldValue>
+                <controllingFieldValue>Social Media Sent</controllingFieldValue>
+                <valueName>Call Appointment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Reached</controllingFieldValue>
+                <controllingFieldValue>Called Us</controllingFieldValue>
+                <controllingFieldValue>Visited Us</controllingFieldValue>
+                <controllingFieldValue>Emailed Us</controllingFieldValue>
+                <controllingFieldValue>Sent Email</controllingFieldValue>
+                <controllingFieldValue>Social Media Reached</controllingFieldValue>
+                <valueName>Visit</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Reached</controllingFieldValue>
+                <controllingFieldValue>Called Us</controllingFieldValue>
+                <controllingFieldValue>Visited Us</controllingFieldValue>
+                <controllingFieldValue>Emailed Us</controllingFieldValue>
+                <controllingFieldValue>Social Media Reached</controllingFieldValue>
+                <valueName>Close</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Reached</controllingFieldValue>
+                <controllingFieldValue>Called Us</controllingFieldValue>
+                <controllingFieldValue>Visited Us</controllingFieldValue>
+                <controllingFieldValue>Emailed Us</controllingFieldValue>
+                <controllingFieldValue>Social Media Reached</controllingFieldValue>
+                <valueName>Change Program</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SalesAction__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Action</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Call Reached</fullName>
+                    <default>false</default>
+                    <label>Call Reached</label>
+                </value>
+                <value>
+                    <fullName>Call Not Reached</fullName>
+                    <default>false</default>
+                    <label>Call Not Reached</label>
+                </value>
+                <value>
+                    <fullName>Called Us</fullName>
+                    <default>false</default>
+                    <label>Called Us</label>
+                </value>
+                <value>
+                    <fullName>Visited Us</fullName>
+                    <default>false</default>
+                    <label>Visited Us</label>
+                </value>
+                <value>
+                    <fullName>Emailed Us</fullName>
+                    <default>false</default>
+                    <label>Emailed Us</label>
+                </value>
+                <value>
+                    <fullName>Sent Email</fullName>
+                    <default>false</default>
+                    <label>Sent Email</label>
+                </value>
+                <value>
+                    <fullName>Social Media Reached</fullName>
+                    <default>false</default>
+                    <label>Social Media Reached</label>
+                </value>
+                <value>
+                    <fullName>Social Media Sent</fullName>
+                    <default>false</default>
+                    <label>Social Media Sent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SchoolCity__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>School City</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SchoolID__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>School ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SchoolName__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>School Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceCodeAuto__c</fullName>
+        <externalId>false</externalId>
+        <label>Source Code Auto</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceCodeGroup__c</fullName>
+        <externalId>false</externalId>
+        <label>Source Code Group</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StartWhen__c</fullName>
+        <externalId>false</externalId>
+        <label>Start When</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubActions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select Sub Action if call not reached.</inlineHelpText>
+        <label>Sub Actions</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>SalesAction__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Wrong Number</fullName>
+                    <default>false</default>
+                    <label>Wrong Number</label>
+                </value>
+                <value>
+                    <fullName>Missing Number</fullName>
+                    <default>false</default>
+                    <label>Missing Number</label>
+                </value>
+                <value>
+                    <fullName>No Answer</fullName>
+                    <default>false</default>
+                    <label>No Answer</label>
+                </value>
+                <value>
+                    <fullName>Not at Home</fullName>
+                    <default>false</default>
+                    <label>Not at Home</label>
+                </value>
+                <value>
+                    <fullName>Busy can’t talk</fullName>
+                    <default>false</default>
+                    <label>Busy can’t talk</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <valueName>Wrong Number</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <valueName>Missing Number</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <valueName>No Answer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <valueName>Not at Home</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Call Not Reached</controllingFieldValue>
+                <valueName>Busy can’t talk</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TaskResult__c</fullName>
+        <description>It captures the result of Task created.</description>
+        <externalId>false</externalId>
+        <label>Task Result</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sent Brochure</fullName>
+                    <default>false</default>
+                    <label>Sent Brochure</label>
+                </value>
+                <value>
+                    <fullName>CallReached</fullName>
+                    <default>false</default>
+                    <label>CallReached</label>
+                </value>
+                <value>
+                    <fullName>Sent Quotation</fullName>
+                    <default>false</default>
+                    <label>Sent Quotation</label>
+                </value>
+                <value>
+                    <fullName>Will not Send Brochure</fullName>
+                    <default>false</default>
+                    <label>Will not Send Brochure</label>
+                </value>
+                <value>
+                    <fullName>Reached - Call</fullName>
+                    <default>false</default>
+                    <label>Reached - Call</label>
+                </value>
+                <value>
+                    <fullName>Not Reached - Call</fullName>
+                    <default>false</default>
+                    <label>Not Reached - Call</label>
+                </value>
+                <value>
+                    <fullName>Reached - Called Us</fullName>
+                    <default>false</default>
+                    <label>Reached - Called Us</label>
+                </value>
+                <value>
+                    <fullName>Reached -Visited Us</fullName>
+                    <default>false</default>
+                    <label>Reached -Visited Us</label>
+                </value>
+                <value>
+                    <fullName>Reached -Emailed Us</fullName>
+                    <default>false</default>
+                    <label>Reached -Emailed Us</label>
+                </value>
+                <value>
+                    <fullName>Reached - Social media</fullName>
+                    <default>false</default>
+                    <label>Reached - Social media</label>
+                </value>
+                <value>
+                    <fullName>Not Reached - Social media</fullName>
+                    <default>false</default>
+                    <label>Not Reached - Social media</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TaskSubResult__c</fullName>
+        <description>It captures the Sub Result of Task created. Basically after Sales user tried contacting customer.</description>
+        <externalId>false</externalId>
+        <label>Task SubResult</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Next Call/Follow-up</fullName>
+                    <default>true</default>
+                    <label>Next Call/Follow-up</label>
+                </value>
+                <value>
+                    <fullName>No Answer</fullName>
+                    <default>false</default>
+                    <label>No Answer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TaskType__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TCC</fullName>
+                    <default>false</default>
+                    <label>TCC</label>
+                </value>
+                <value>
+                    <fullName>UCC</fullName>
+                    <default>false</default>
+                    <label>UCC</label>
+                </value>
+                <value>
+                    <fullName>FUP</fullName>
+                    <default>false</default>
+                    <label>FUP</label>
+                </value>
+                <value>
+                    <fullName>FUA</fullName>
+                    <default>false</default>
+                    <label>FUA</label>
+                </value>
+                <value>
+                    <fullName>HCC</fullName>
+                    <default>false</default>
+                    <label>HCC</label>
+                </value>
+                <value>
+                    <fullName>HCF</fullName>
+                    <default>false</default>
+                    <label>HCF</label>
+                </value>
+                <value>
+                    <fullName>SPQ</fullName>
+                    <default>false</default>
+                    <label>SPQ</label>
+                </value>
+                <value>
+                    <fullName>SBR</fullName>
+                    <default>false</default>
+                    <label>SBR</label>
+                </value>
+                <value>
+                    <fullName>MCR</fullName>
+                    <default>false</default>
+                    <label>MCR</label>
+                </value>
+                <value>
+                    <fullName>RCP</fullName>
+                    <default>false</default>
+                    <label>RCP</label>
+                </value>
+                <value>
+                    <fullName>PTS</fullName>
+                    <default>false</default>
+                    <label>PTS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transportation__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Transportation</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TritonId__c</fullName>
+        <description>Triton Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Triton Id</inlineHelpText>
+        <label>Triton Id</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UserSelectedSourceCode__c</fullName>
+        <externalId>false</externalId>
+        <label>User Selected Source Code</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WebOnlinePaymentTXLogID__c</fullName>
+        <description>S-8 created for mapping with the posiden fields for Lead Imports</description>
+        <externalId>false</externalId>
+        <label>Web Online Payment TX Log ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>MyActivities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyDelegatedActivities</fullName>
+        <filterScope>Delegated</filterScope>
+        <label>My Delegated Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>MyTeamsActivities</fullName>
+        <filterScope>Team</filterScope>
+        <label>My Team&apos;s Activities</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>TASK.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TOMORROW</value>
+        </filters>
+        <label>Today&apos;s Tasks</label>
+    </listViews>
+    <listViews>
+        <fullName>UpcomingEvents</fullName>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>ACTIVITY.TASK</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>TASK.DUE_DATE</field>
+            <operation>greaterThan</operation>
+            <value>YESTERDAY</value>
+        </filters>
+        <label>Upcoming Events</label>
+    </listViews>
+    <searchLayouts>
+        <searchResultsAdditionalFields>TASK.SUBJECT</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHO_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.WHAT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TASK.DUE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

@@ -1,0 +1,19 @@
+<!--
+ - Created by Archana on 28-07-2017.
+ -->
+
+<aura:component description="Accordion" implements="flexipage:availableForRecordHome,force:appHostable,force:hasRecordId">
+    <aura:attribute name="content" type="Aura.Component[]"/>
+    <div class="slds-section slds-is-open" aura:id="sectionHeader" onclick="{!c.onClick}">
+        <h3 class="slds-section__title">
+            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                <c:svgIcon ariaHidden="true" class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                           xlinkHref="/resource/LDS_Resource/assets/icons/utility-sprite/svg/symbols.svg#switch"/>
+                <span class="slds-truncate" title="Section Title">Section Title</span>
+            </button>
+        </h3>
+        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+            {!v.content}
+        </div>
+    </div>
+</aura:component>

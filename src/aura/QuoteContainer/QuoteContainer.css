@@ -1,0 +1,7 @@
+.THIS .vfFrame{
+    border: 1px dashed !important;
+    border-radius: 0.25rem !important;
+}
+.THIS .k-grouping-header{
+    display:none !important;
+}

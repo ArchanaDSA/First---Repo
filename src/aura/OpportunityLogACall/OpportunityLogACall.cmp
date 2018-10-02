@@ -1,0 +1,134 @@
+<!--
+ - Created by Archana on 05-08-2017.
+ -->
+
+<aura:component description="OpportunityLogACall" controller="LogACallController" implements="flexipage:availableForRecordHome,force:appHostable,force:hasRecordId" >
+    <aura:attribute name="salesAction" type="List"/>
+    <aura:attribute name="likelihoodToBook" type="List"/>
+    <aura:attribute name="hearAboutEF" type="List"/>
+    <aura:attribute name="destination" type="List"/>
+    <aura:attribute name="closeReasons" type="List"/>
+    <aura:attribute name="callResults" type="List"/>
+    <aura:attribute name="durations" type="List"/>
+    <aura:attribute name="destinations" type="List"/>
+    <aura:attribute name="subActions" type="List"/>
+    <aura:attribute name="selectedActionType" type="String"/>
+    <aura:attribute name="selectedSubActionType" type="String"/>
+    <aura:attribute name="selectedCallResult" type="String"/>
+    <aura:attribute name="selectedLikelihoodToBook" type="String"/>
+    <aura:attribute name="selectedCloseReason" type="String"/>
+    <aura:attribute name="bookOnDate" type="Date"/>
+    <aura:attribute name="years" type="String[]"/>
+    <aura:attribute name="selectedActionDate" type="DateTime"/>
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="showMessage" type="Boolean"/>
+    <aura:attribute name="messageType" type="String"/>
+    <aura:attribute name="messageTitle" type="String"/>
+    <aura:attribute name="months" type="String[]" default="Select,January,February,March,April,May,June,July,August,September,October,November,December"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-panel slds-border_bottom slds-border_top slds-border_left slds-border_right">
+        <div class="slds-p-around_x-small slds-border_bottom">
+            <h2 class="slds-truncate" >LOG AN ACTION</h2>
+        </div>
+
+        <div class="slds-panel__section">
+            <aura:renderIf isTrue="{!v.showMessage}">
+                <ui:message title="{!v.messageTitle}" severity="{!v.messageType}" closable="true">{!v.message}
+                </ui:message>
+            </aura:renderIf>
+            <div class="slds-grid slds-wrap">
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Opportunity Action</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" value="{!v.selectedActionType}"
+                                change="{!c.onSalesActionChanged}" required="true">
+                    <aura:iteration items="{!v.salesAction}" var="action">
+                        <ui:inputSelectOption text="{!action}" label="{!action}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <aura:renderIf isTrue="{!v.selectedActionType == 'Call Not Reached'?true:false}">
+                    <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Sub Action</label>
+                    <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" value="{!v.selectedSubActionType}">
+                        <aura:iteration items="{!v.subActions}" var="subAction">
+                            <ui:inputSelectOption text="{!subAction}" label="{!subAction}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                </aura:renderIf>
+                <div class="slds-large-size_3-of-3 slds-p-top_x-small">
+                </div>
+                <div class="slds-border_bottom slds-large-size_3-of-3">
+                </div>
+                <div class="slds-large-size_3-of-3 slds-p-top_x-small">
+                </div>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Likelihood to book</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" value="{!v.selectedLikelihoodToBook}">
+                    <aura:iteration items="{!v.likelihoodToBook}" var="option">
+                        <ui:inputSelectOption text="{!option}" label="{!option}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <label class="slds-large-size_2-of-4  slds-p-around_x-small" for="input-id-01">How did you hear about EF?</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4">
+                    <aura:iteration items="{!v.hearAboutEF}" var="option">
+                        <ui:inputSelectOption text="{!option}" label="{!option}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Destination</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" aura:id="marketDropdown">
+                    <aura:iteration items="{!v.destinations}" var="destination">
+                        <ui:inputSelectOption text="{!destination}" label="{!destination}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Duration</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" aura:id="marketDropdown">
+                    <aura:iteration items="{!v.durations}" var="duration">
+                        <ui:inputSelectOption text="{!duration}" label="{!duration}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">When</label>
+                <div class="slds-grid slds-large-size_2-of-4">
+                    <ui:inputSelect class="single slds-large-size_1-of-2 slds-p-right_x-small">
+                        <aura:iteration items="{!v.months}" var="month">
+                            <ui:inputSelectOption text="{!month}" label="{!month}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                    <ui:inputSelect class="single slds-large-size_1-of-2 slds-p-left_x-small" aura:id="marketDropdown">
+                        <aura:iteration items="{!v.years}" var="year">
+                            <ui:inputSelectOption text="{!year}" label="{!year}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                </div>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Will book on</label>
+                <div class=" slds-large-size_2-of-4">
+                    <ui:inputDate class="form-control" displayDatePicker="true" value="{!v.bookOnDate}" />
+                </div>
+                <ui:inputTextArea aura:id="comments" class="slds-large-size_4-of-4 slds-p-around_x-small commentsArea" label="Comments" value="My comments" rows="3"/>
+                <div class="slds-large-size_4-of-4 slds-p-top_x-small">
+                </div>
+                <div class="slds-border_bottom slds-large-size_4-of-4">
+                </div>
+                <div class="slds-large-size_4-of-4 slds-p-top_x-small">
+                </div>
+                <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Result/next action</label>
+                <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" disabled="{!v.selectedActionType != 'Select'?false:true}" value="{!v.selectedCallResult}">
+                    <aura:iteration items="{!v.callResults}" var="callResult">
+                        <ui:inputSelectOption text="{!callResult}" label="{!callResult}"/>
+                    </aura:iteration>
+                </ui:inputSelect>
+                <aura:renderIf isTrue="{!v.selectedCallResult == 'Close'?true:false}">
+                    <label class="slds-large-size_2-of-4 slds-p-around_x-small" for="input-id-01">Close Reason</label>
+                    <ui:inputSelect class="single slds-large-size_2-of-4 slds-p-around_x-small" value="{!v.selectedCloseReason}">
+                        <aura:iteration items="{!v.closeReasons}" var="closeReason">
+                            <ui:inputSelectOption text="{!closeReason}" label="{!closeReason}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                </aura:renderIf>
+                <label class="slds-large-size_1-of-4 slds-p-around_x-small" for="input-id-01">Action time/date</label>
+                <div class=" slds-large-size_3-of-4">
+                    <ui:inputDateTime class="form-control" displayDatePicker="true"  disabled="{!v.selectedActionType != 'Select'?false:true}" value="{!v.selectedActionDate}" />
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-panel__section slds-grid">
+            <button class="slds-button slds-button_brand slds-p-right_xx-small slds-large-size_1-of-1" onclick="{!c.onSaveClicked}">Save action</button>
+        </div>
+    </div>
+</aura:component>

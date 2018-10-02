@@ -1,0 +1,211 @@
+<!--
+ - Created by thejasvi.a on 9/5/2017.
+ -->
+
+<aura:component description="CampaignGrid" controller="InviteCampaign"
+                implements="flexipage:availableForRecordHome,force:appHostable,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="markets" type="List"/>
+    <aura:attribute name="selectedMarket" type="String"/>
+    <aura:attribute name="selectedSalesOffice" type="String"/>
+    <aura:attribute name="selectedProduct" type="String"/>
+    <aura:attribute name="selectedMeetingType" type="String"/>
+    <aura:attribute name="selectedProgram" type="String"/>
+    <aura:attribute name="salesoffices" type="List"/>
+    <aura:attribute name="products" type="List"/>
+    <aura:attribute name="programs" type="List"/>
+    <aura:attribute name="initialData" type="object"/>
+    <aura:attribute name="today" type="Datetime" />
+    <aura:attribute name="dateto" type="Datetime" />
+    <aura:attribute name="myBool" type="Boolean"/>
+    <aura:attribute name="num" type="integer" default=""/>
+    <aura:attribute name="meetingtypes" type="List"/>
+    <aura:attribute name="meetingcities" type="List"/>
+    <aura:attribute name="campaigns" type="campaign[]"/>
+    <div>
+        <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout" role="grid">
+            <thead>
+            <tr class="slds-line-height_reset">
+                <th scope="col" class="slds-text-align_right" style="width: 3.25rem;">
+                    <div class="slds-th__action slds-th__action_form">
+          <span class="slds-checkbox">
+              <input type="checkbox" name="options" id="checkbox-9" value="on"/>
+            <label class="slds-checkbox__label" for="checkbox-9">
+              <span class="slds-checkbox_faux"></span>
+              <span class="slds-form-element__label slds-assistive-text">Select All</span>
+            </label>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Program">Program</span>
+                        <div class="slds-icon_container">
+
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-29" class="slds-assistive-text">Name column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-29" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Meeting City">Meeting City</span>
+                        <div class="slds-icon_container">
+
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-30" class="slds-assistive-text">Account Name column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-30" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Meeting Type">Meeting Type</span>
+                        <div class="slds-icon_container">
+
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-31" class="slds-assistive-text">Close Date column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-31" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Date From">Date From</span>
+                        <div class="slds-icon_container">
+
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-32" class="slds-assistive-text">Stage column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-32" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Date To">Date To</span>
+                        <div class="slds-icon_container">
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-33" class="slds-assistive-text">Confidence column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-33" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="IsUP">Is UP</span>
+                        <div class="slds-icon_container">
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-34" class="slds-assistive-text">Amount column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-34" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                        <span class="slds-assistive-text">Sort </span>
+                        <span class="slds-truncate" title="Meeting Size">Meeting Size</span>
+                        <div class="slds-icon_container">
+
+
+                        </div>
+                        <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                    </a>
+                    <div class="slds-resizable">
+                        <label for="cell-resize-handle-35" class="slds-assistive-text">Contact column width</label>
+                        <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-35" tabindex="0"/>
+                        <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+                    </div>
+                </th>
+                <th scope="col" style="width: 3.25rem;">
+                    <div class="slds-th__action">
+                        <span class="slds-assistive-text">Actions</span>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <aura:iteration items="{!v.campaigns}" var="campaign">
+                <tr class="slds-hint-parent">
+                    <td role="gridcell" tabindex="0" class="slds-text-align_right" style="width: 3.75rem;">
+                        <div class="slds-checkbox_add-button">
+                            <input type="checkbox" class="slds-assistive-text" id="add-checkbox-1" tabindex="-1" value="on"/>
+                            <label for="add-checkbox-1" class="slds-checkbox_faux">
+                                <span class="slds-assistive-text">Select item 1</span>
+                            </label>
+                        </div>
+                    </td>
+                    <!-- <th scope="row">
+              <div class="slds-truncate" ><a href="javascript:void(0);">{!campaign.Program__c}</a></div>
+          </th>-->
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.Program__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.MeetingCity__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.MeetingType__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.DateFrom__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.DateTo__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.IsUP__c}</div>
+                    </td>
+                    <td role="gridcell">
+                        <div class="slds-truncate" >{!campaign.MeetingSize__c}</div>
+                    </td>
+                </tr>
+            </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

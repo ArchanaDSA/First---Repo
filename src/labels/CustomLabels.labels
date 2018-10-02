@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>Account</value>
+    </labels>
+    <labels>
+        <fullName>CAM</fullName>
+        <categories>this is used in duplicate check class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CAM</shortDescription>
+        <value>CAM</value>
+    </labels>
+    <labels>
+        <fullName>CampaignApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>Campaign</value>
+    </labels>
+    <labels>
+        <fullName>ClosedLost</fullName>
+        <categories>this is used in duplicate check class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClosedLost</shortDescription>
+        <value>Closed Lost</value>
+    </labels>
+    <labels>
+        <fullName>ClosedWon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClosedWon</shortDescription>
+        <value>Closed Won</value>
+    </labels>
+    <labels>
+        <fullName>CustomerRequestType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Request Type</shortDescription>
+        <value>01226000000999Y</value>
+    </labels>
+    <labels>
+        <fullName>EditAccessLevel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EditAccessLevel</shortDescription>
+        <value>EDIT</value>
+    </labels>
+    <labels>
+        <fullName>ExcelImportChatterGroupName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExcelImportChatterGroupName</shortDescription>
+        <value>ExcelImportGroup</value>
+    </labels>
+    <labels>
+        <fullName>Excel_Import_Standard_Templates_Library_Folder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExcelImportStandardTemplatesLibraryFolder</shortDescription>
+        <value>Excel Import Templates</value>
+    </labels>
+    <labels>
+        <fullName>ExceptionMessage</fullName>
+        <categories>Exception</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exception Message</shortDescription>
+        <value>Please contact the system administrator</value>
+    </labels>
+    <labels>
+        <fullName>Integration_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IntegrationUser</shortDescription>
+        <value>savita.b@ef.com.dupcheck</value>
+    </labels>
+    <labels>
+        <fullName>LeadApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>Lead</value>
+    </labels>
+    <labels>
+        <fullName>LeadStageConvert</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LeadStageConvert</shortDescription>
+        <value>Converted</value>
+    </labels>
+    <labels>
+        <fullName>LeadStageConverted</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LeadStageConverted</shortDescription>
+        <value>Converted</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Owner_Change_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Owner Change Error</shortDescription>
+        <value>This record cannot be assigned to the selected user as he does not have access to Market</value>
+    </labels>
+    <labels>
+        <fullName>MULTI</fullName>
+        <categories>this is used in duplicate check class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MULTI</shortDescription>
+        <value>MULTI</value>
+    </labels>
+    <labels>
+        <fullName>OppStageBkn</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageBkn</shortDescription>
+        <value>BKN</value>
+    </labels>
+    <labels>
+        <fullName>OppStageClosed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageClosed</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>OppStageClosedLost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageClosedLost</shortDescription>
+        <value>Closed Lost</value>
+    </labels>
+    <labels>
+        <fullName>OppStageInactive</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageInactive</shortDescription>
+        <value>InActive</value>
+    </labels>
+    <labels>
+        <fullName>OppStageRes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageRes</shortDescription>
+        <value>RES</value>
+    </labels>
+    <labels>
+        <fullName>OppStageWon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppStageWon</shortDescription>
+        <value>Won</value>
+    </labels>
+    <labels>
+        <fullName>OpportunityApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>Opportunity</value>
+    </labels>
+    <labels>
+        <fullName>Person_Account_Recordtype_Developer_Name</fullName>
+        <categories>Custom Development</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Person Account Recordtype Developer Name</shortDescription>
+        <value>PersonAccount</value>
+    </labels>
+    <labels>
+        <fullName>Prospecting</fullName>
+        <categories>this is used in duplicate check class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospecting</shortDescription>
+        <value>Prospecting</value>
+    </labels>
+    <labels>
+        <fullName>Reservation</fullName>
+        <categories>this is used in duplicate check class</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reservation</shortDescription>
+        <value>RES</value>
+    </labels>
+    <labels>
+        <fullName>System_administrator_profile_name</fullName>
+        <categories>Custom Development,TestClass</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>System administrator profile name</shortDescription>
+        <value>System administrator</value>
+    </labels>
+    <labels>
+        <fullName>TBC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TBC</shortDescription>
+        <value>TBC</value>
+    </labels>
+    <labels>
+        <fullName>TaskRecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskRecordTypeId</shortDescription>
+        <value>0122600000098joAAA</value>
+    </labels>
+    <labels>
+        <fullName>TemplateSetting</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TemplateSetting</shortDescription>
+        <value>TemplateSetting__c</value>
+    </labels>
+    <labels>
+        <fullName>dcDiscardApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>dupcheck__dcDiscard__c</value>
+    </labels>
+    <labels>
+        <fullName>dcJobApiName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in Trigger Disabling Logic</shortDescription>
+        <value>dupcheck__dcJob__c</value>
+    </labels>
+</CustomLabels>

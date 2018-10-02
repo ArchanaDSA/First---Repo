@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>TaskCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>TaskCompactLayout</fullName>
+        <fields>Subject</fields>
+        <fields>OwnerId</fields>
+        <fields>Type</fields>
+        <fields>TaskSubtype</fields>
+        <fields>Program__c</fields>
+        <fields>ActivityDate</fields>
+        <label>TaskCompactLayout</label>
+    </compactLayouts>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>CRMC_PP__Batch_Add</fullName>
+        <description>Batch Add</description>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Subject</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Priority</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Batch Add</label>
+    </fieldSets>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>SystemTask</fullName>
+        <active>true</active>
+        <description>Referred for Automatic task creation</description>
+        <label>System Task</label>
+        <picklistValues>
+            <picklist>CloseMainReason__c</picklist>
+            <values>
+                <fullName>Finds EF offer too expensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Had intention and money%2C but chose to do something else</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Had no intention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has no means</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost to competitor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CloseSubReason__c</picklist>
+            <values>
+                <fullName>Better Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Better offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bigger brand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor is cheaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitors has more things included in the price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has better reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has local office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My friend is going with a competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replied faster</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Channel__c</picklist>
+            <values>
+                <fullName>AP Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APP Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aupair Kft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coupon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exhibition%2FFair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gewinnspiel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSY Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LS Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Replycard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card EFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card FD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card LT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCH Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ResultType__c</picklist>
+            <values>
+                <fullName>Call Appointment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Next Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SalesAction__c</picklist>
+            <values>
+                <fullName>Call Not Reached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Reached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Called Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emailed Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media Reached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visited Us</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubActions__c</picklist>
+            <values>
+                <fullName>Busy can%E2%80%99t talk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Number</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskResult__c</picklist>
+            <values>
+                <fullName>CallReached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Reached - Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Reached - Social media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Called Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Social media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached -Emailed Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached -Visited Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Brochure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Quotation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Will not Send Brochure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskSubResult__c</picklist>
+            <values>
+                <fullName>Next Call%2FFollow-up</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskType__c</picklist>
+            <values>
+                <fullName>FUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HCC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HCF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RCP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TCC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>TaskCompactLayout</compactLayoutAssignment>
+        <description>Referred for Personal task</description>
+        <label>Task</label>
+        <picklistValues>
+            <picklist>CloseMainReason__c</picklist>
+            <values>
+                <fullName>Finds EF offer too expensive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Had intention and money%2C but chose to do something else</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Had no intention</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has no means</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lost to competitor</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CloseSubReason__c</picklist>
+            <values>
+                <fullName>Better Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Better offer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bigger brand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitor is cheaper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Competitors has more things included in the price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has better reputation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Has local office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>More flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>My friend is going with a competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replied faster</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Channel__c</picklist>
+            <values>
+                <fullName>AP Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APP Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aupair Kft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CLT Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Convert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coupon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Exhibition%2FFair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gewinnspiel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSY Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LS Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Flyer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Replycard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not known</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card EFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card FD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reply Card LT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCH Reply Card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ResultType__c</picklist>
+            <values>
+                <fullName>Call Appointment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Close</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Next Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visit</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SalesAction__c</picklist>
+            <values>
+                <fullName>Call Not Reached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Reached</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SubActions__c</picklist>
+            <values>
+                <fullName>Busy can%E2%80%99t talk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Missing Number</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not at Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wrong Number</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskResult__c</picklist>
+            <values>
+                <fullName>CallReached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Reached - Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Reached - Social media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Called Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached - Social media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached -Emailed Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reached -Visited Us</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Brochure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Quotation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Will not Send Brochure</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskSubResult__c</picklist>
+            <values>
+                <fullName>Next Call%2FFollow-up</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>No Answer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TaskType__c</picklist>
+            <values>
+                <fullName>PTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPQ</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TCC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UCC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Follow_up_date_validation</fullName>
+        <active>false</active>
+        <description>Follow up date should be greater than or equal to today if any follow up is required.</description>
+        <errorConditionFormula>AND(
+(NOT($Setup.BypassTriggersValidations__c.DisableValidations__c)), 
+    ISCHANGED(FollowUpDate__c ) 
+    , 
+    FollowUpDate__c &lt;= now() 
+)</errorConditionFormula>
+        <errorMessage>Follow up date should be greater than or equal to today.</errorMessage>
+    </validationRules>
+</CustomObject>

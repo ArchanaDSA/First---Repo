@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This will help in mapping Customer Request to Tasks And Tasks to Tasks</description>
+    <fields>
+        <fullName>CanCloseManually__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Can the task be closed manually</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>CanCloseManually</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CanCreateMannually__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>CanCreateMannually</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CreateCallType__c</fullName>
+        <description>This will tell which task we can create  for which Activity/Task
+values will be seperated by &apos;|&apos;</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>CreateCallType</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ForClosedCallTypes__c</fullName>
+        <description>If all the call type tasks for customer is closed then use create tasks based on this field</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>ForClosedCallTypes</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Weather thee following record is active or not</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>IsActive</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsCallType__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>IsCallType</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsTaskPerCustomer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This will define weather multiple one customer can have multiple tasks</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>IsTaskPerCustomer</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This should be same as ENUM name as we are mapping ENUM name to this field</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Name</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>No__c</fullName>
+        <description>This Number is same as ENUM number in Code ,Make sure if you change anything in this metadata you need to change in apex code as well REF: ENUM order we are depending on ENUM order as ENUM order in code and rows in this settings are same</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>No</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>RULE__c</fullName>
+        <description>this will be custom label name which contains rule for executing the task/Activity</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>RULE</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RuleForActivity__c</fullName>
+        <description>This will define what rules to be applied while creating/Updating Task from activity</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>RuleForActivity</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RuleForTask__c</fullName>
+        <description>This will tell what rules to be applied while creating/Updating Tasks from Task(For user only this we are not reading in code we have rules defined in code but we check if this column is empty or not while applying rule)</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>RuleForTask</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaskGroup__c</fullName>
+        <description>Group of Tasks separated by &apos;|&apos;</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>TaskGroup</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TaskSubject__c</fullName>
+        <description>This will be subject of the task while creating</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>TaskSubject</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Type of the task setting</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Customer Request</fullName>
+                    <default>true</default>
+                    <label>Customer Request</label>
+                </value>
+                <value>
+                    <fullName>Task</fullName>
+                    <default>false</default>
+                    <label>Task</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>UpdateCallType__c</fullName>
+        <description>Update the call type tasks if we have any open call type tasks</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>UpdateCallType</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Task Setting</label>
+    <pluralLabel>Task Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

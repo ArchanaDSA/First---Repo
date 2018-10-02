@@ -1,0 +1,77 @@
+<!--
+ - Created by aneesh.bhat on 25-Jul-17.
+ -->
+
+<aura:component description="MarketComponent" controller="MarketComponentController"
+                implements="flexipage:availableForRecordHome,force:appHostable,force:hasRecordId">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="markets" type="List"/>
+    <aura:attribute name="selectedMarket" type="String"/>
+    <aura:attribute name="selectedSalesOffice" type="String"/>
+    <aura:attribute name="selectedProduct" type="String"/>
+    <aura:attribute name="selectedProgram" type="String"/>
+    <aura:attribute name="salesOffices" type="List"/>
+    <aura:attribute name="products" type="List"/>
+    <aura:attribute name="programs" type="List"/>
+    <aura:attribute name="initialData" type="object"/>
+    <div class="slds-panel slds-is-editing">
+        <c:ExpandableSection >
+            <aura:set attribute="content">
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-large-size_1-of-2 slds-form-element slds-hint-parent slds-border_bottom slds-form-element_edit">
+                        <div class="slds-p-around_medium slds-border_bottom">
+                            <ui:inputSelect disabled="true" class="single" label="Market" aura:id="marketDropdown"
+                                            value="{!v.selectedMarket}" change="{!c.onMarketChanged}">
+                                <aura:iteration items="{!v.markets}" var="market" indexVar="key">
+                                    <ui:inputSelectOption text="{!market.key}" label="{!market.value}"/>
+                                </aura:iteration>
+                            </ui:inputSelect>
+                        </div>
+                        <!--<span class="slds-form-element__label">Market</span>-->
+                        <!--<div class="slds-form-element__control">-->
+                            <!--<span class="slds-form-element__static">{!v.selectedMarket}</span>-->
+                            <!--<button class="slds-button slds-button_icon slds-float_right slds-button_icon slds-button_icon-small" title="Edit this Field">-->
+                                <!--<c:svgIcon class="slds-button__icon slds-button__icon_hint" ariaHidden="true" xlinkHref="/resource/LDS_Resource/assets/icons/utility-sprite/svg/symbols.svg#edit"/>-->
+                                <!--<span class="slds-assistive-text">Edit this Field</span>-->
+                            <!--</button>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="slds-large-size_1-of-2 slds-p-around_medium slds-border_bottom">
+                        <ui:inputSelect class="single" disabled="{!v.selectedMarket ? false :true}" label="Sales Office"
+                                        value="{!v.selectedSalesOffice}">
+                            <aura:iteration items="{!v.salesOffices}" var="salesOffice" indexVar="key">
+                                <ui:inputSelectOption text="{!salesOffice}" label="{!salesOffice}"/>
+                            </aura:iteration>
+                        </ui:inputSelect>
+                    </div>
+                    <div class="slds-large-size_1-of-2 slds-p-around_medium">
+                        <ui:inputSelect class="single" label="Product" value="{!v.selectedProduct}"
+                                        change="{!c.onProductChanged}">
+                            <aura:iteration items="{!v.products}" var="product" indexVar="key">
+                                <ui:inputSelectOption text="{!product.key}" label="{!product.value}"/>
+                            </aura:iteration>
+                        </ui:inputSelect>
+                    </div>
+                    <div class="slds-large-size_1-of-2 slds-p-around_medium">
+                        <ui:inputSelect class="single" disabled="{!v.selectedProduct ? false:true}" label="Program"
+                                        value="{!v.selectedProgram}">
+                            <aura:iteration items="{!v.programs}" var="program" indexVar="key">
+                                <ui:inputSelectOption text="{!program}" label="{!program}"/>
+                            </aura:iteration>
+                        </ui:inputSelect>
+                    </div>
+                    <div class="slds-large-size_1-of-4 slds-p-horizontal--medium slds-hide" aura:id="mySpinner">
+                        <lightning:spinner variant="brand" size="small"/>
+                    </div>
+                </div>
+                <div class="slds-panel__actions slds-border_top">
+                    <div class="slds-grid slds-grid_align-center">
+                        <button type="button" class="slds-button slds-button_neutral">Cancel</button>
+                        <button type="button" class="slds-button slds-button_brand" onclick="{!c.saveData}">Save
+                        </button>
+                    </div>
+                </div>
+            </aura:set>
+        </c:ExpandableSection>
+    </div>
+</aura:component>
